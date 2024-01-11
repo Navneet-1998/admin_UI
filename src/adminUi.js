@@ -1,29 +1,32 @@
-import React, {useEffect, useState} from "react"
-import "./adminUi.css"
+import React, { useEffect, useState } from "react";
+import "./adminUi.css";
 import SearchBox from "./components/searchBox";
 import Cards from "./components/card";
 
-function AdminUI(){
-    const [data, setData] = useState([])
-    const [filteredSearch, setFilteredSearch] = useState([])
+const AdminUI = () => {
+  // State for the main data
+  const [data, setData] = useState([]);
+  // State for the filtered search data
+  const [filteredSearch, setFilteredSearch] = useState([]);
 
-    const handleSearchedData = (value) => {
-        console.log(value)
-        setData(value)
-    }
+  // Callback to update the main data when searched
+  const handleSearchedData = (searchResult) => {
+    setData(searchResult);
+  };
 
+  // Callback to update the filtered search data
+  const handleFilterSearch = (filteredResult) => {
+    setFilteredSearch(filteredResult);
+  };
 
-    const handleFilterSearch = (value) => {
-        console.log(value)
-        setFilteredSearch(value)
-    }
-
-    return (
-     <>
-     <SearchBox searchedData={handleSearchedData} newSearchData={filteredSearch}/>
-     <Cards searchData={data} filteringSearch={handleFilterSearch}/>
-     </>
-    )
-}
+  return (
+    <>
+      {/* SearchBox component for searching */}
+      <SearchBox searchedData={handleSearchedData} newSearchData={filteredSearch} />
+      {/* Cards component for displaying the data */}
+      <Cards searchData={data} filteringSearch={handleFilterSearch} />
+    </>
+  );
+};
 
 export default AdminUI;

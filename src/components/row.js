@@ -30,28 +30,17 @@ const Modal = ({ show, onClose, onConfirm }) => {
 const Tabs = ({ tabs, tabSelected, dataSize }) => {
   const [activeTab, setActiveTab] = useState(0);
 
-  const handleTabClick = (index) => {
-    setActiveTab(index);
-  };
+  const handleTabClick = (index) => setActiveTab(index);
 
   const handleForward = (index) => {
-
     if (activeTab >= 0 && activeTab < dataSize) {
-      if (index === 0) {
-        setActiveTab(activeTab + 1);
-      } else {
-        setActiveTab(dataSize);
-      }
+      setActiveTab(index === 0 ? activeTab + 1 : dataSize);
     }
   };
 
   const handleBackward = (index) => {
     if (activeTab > 0 && activeTab <= dataSize) {
-      if (index === 0) {
-        setActiveTab(0);
-      } else {
-        setActiveTab(activeTab - 1);
-      }
+      setActiveTab(index === 0 ? 0 : activeTab - 1);
     }
   };
 
@@ -568,7 +557,7 @@ function Column({ data, editedCollection, newDeletedList }) {
   },[data])
 
   return (
-    <>
+        <>
       <div>
         {showError && (
           <ErrorMessage
@@ -689,7 +678,6 @@ function Column({ data, editedCollection, newDeletedList }) {
         onClose={handleCancelDelete}
         onConfirm={handleDeleteConfirmation}
       />
-
       <div style={{ display: "flex", flexDirection: "row" }}>
         <div
           style={{ display: "flex", justifyContent: "center", width: "12%" }}
@@ -711,8 +699,8 @@ function Column({ data, editedCollection, newDeletedList }) {
           </button>
         </div>
         <div
-          style={{ display: "flex", justifyContent: "center", }}
-          class="tab-controller" 
+          style={{ display: "flex", justifyContent: "center" }}
+          class="tab-controller"
         >
           <Tabs
             tabs={tabs()}
@@ -722,6 +710,7 @@ function Column({ data, editedCollection, newDeletedList }) {
         </div>
       </div>
     </>
+    
   );
 }
 
