@@ -1,0 +1,331 @@
+/* Default styles for all screen sizes */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.tab-controller {
+    width: 80%
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* Responsive styles for smaller screens */
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    /* Adjust other styles for smaller screens as needed */
+}
+
+
+/* Responsive styles for even smaller screens */
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 5px;
+    }
+    /* Adjust other styles for even smaller screens as needed */
+}
+
+.pad {
+    padding-left: 1%;
+}
+
+.rows {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(239, 237, 237);
+}
+
+.Starts {
+    display: flex;
+    justify-content: start;
+    padding: 10px 5px;
+    width: 30%;
+}
+
+.Inputs {
+    width: 20px;
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+.news {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-weight: 700;
+    justify-content: space-between;
+}
+
+.textStarts {
+    text-align: start;
+}
+
+.checkRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    border-bottom: 2px solid rgb(239, 237, 237);
+}
+
+.newStay {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.gotYou {
+    display: flex;
+    width: 30%;
+    justify-content: start;
+    font-size: 90%;
+}
+
+.email {
+    display: flex;
+    width: 30%;
+    justify-content: start;
+    font-size: 90%;
+}
+
+.role {
+    display: flex;
+    width: 30%;
+    justify-content: start;
+    font-size: 90%;
+}
+
+.rowing {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-self: center;
+}
+
+.btns {
+    display: flex;
+    justify-content: end;
+    margin: 0px 3px;
+}
+
+.checkRow:hover {
+    box-shadow: 0px 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.icons:hover {
+    box-shadow: 5px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.correctSize {
+    width: 75%;
+}
+
+.error-message-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+}
+
+.error-message {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#startingTab {
+    padding: "20px 20px";
+}
+
+#middleTab {
+    padding: "18px 24px";
+}
+
+#lastTab {
+    padding: "20px 20px",
+}
+
+.space {
+    width: 18%;
+}
+
+.emails {
+    width: 20%;
+    flex-wrap: wrap;
+}
+
+.roles {
+    width: 10%;
+}
+
+@media screen and (max-width: 1050px) {
+    .gotYou {
+        width: 30%;
+        font-size: 80%;
+    }
+    .email {
+        display: flex;
+        width: 30%;
+        justify-content: start;
+        font-size: 80%;
+    }
+    .role {
+        display: flex;
+        width: 30%;
+        justify-content: start;
+        font-size: 80%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .gotYou {
+        width: 30%;
+        font-size: 80%;
+    }
+    .email {
+        display: flex;
+        width: 30%;
+        justify-content: start;
+        font-size: 80%;
+    }
+    .role {
+        display: flex;
+        width: 30%;
+        justify-content: start;
+        font-size: 80%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .gotYou {
+        width: 100%;
+        font-size: 60%;
+    }
+    .space {
+        display: none;
+    }
+    .email {
+        display: flex;
+        max-width: 100%;
+        justify-content: start;
+        font-size: 70%;
+    }
+    .role {
+        display: flex;
+        max-width: 100%;
+        justify-content: end;
+        font-size: 70%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .gotYou {
+        width: 30%;
+        font-size: 70%;
+    }
+    .email {
+        display: flex;
+        width: 30%;
+        justify-content: start;
+        font-size: 70%;
+    }
+    .role {
+        display: flex;
+        width: 30%;
+        justify-content: center;
+        font-size: 70%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .gotYou {
+        width: 30%;
+        font-size: 70%;
+    }
+    .Starts {
+        width: 10%;
+    }
+    .email {
+        display: flex;
+        width: 30%;
+        justify-content: start;
+        font-size: 70%;
+    }
+    .role {
+        display: flex;
+        width: 30%;
+        justify-content: start;
+        font-size: 70%;
+    }
+    .tab-controller {
+        width: 90%
+    }
+    .startingTab {
+        padding: 10px 10px;
+    }
+    .middleTab {
+        padding: 8px 14px;
+    }
+    .lastTab {
+        padding: 10px 10px,
+    }
+}
+
+.tabs-container {
+    display: flex;
+    flex-direction: row;
+    /* On small screens, stack tabs vertically */
+}
+
+.tab-headers {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow tabs to wrap to the next line on small screens */
+}
+
+.tab-header {
+    margin: 5px;
+    padding: 14px 20px;
+    border-radius: 50%;
+    border: 1000% solid #e0e0e0;
+    cursor: pointer;
+    background-color: #e0e0e0;
+}
+
+.active {
+    border: 2px solid #e0e0e0;
+    background-color: white;
+}
+
+
+/* Add media query for smaller screens */
+
+@media screen and (max-width: 600px) {
+    .tab-headers {
+        flex-direction: column;
+    }
+}

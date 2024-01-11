@@ -1,0 +1,19 @@
+input {
+    margin: 2% 0% 0% 0%;
+    width: 90%;
+    height: 30px;
+    border: 2px solid lightgray;
+    padding-left: 1%;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input::after {
+    border: 0cap;
+    color: lightgray;
+}
+
+input::before {
+    border: 0cap;
+    color: lightgray;
+}
